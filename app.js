@@ -26,8 +26,10 @@ function updateCatImage() {
   const clothesUrl =
     catTraits.clothes !== "" ? baseUrl + "Clothes/" + catTraits.clothes : "";
   const hatUrl = catTraits.hat !== "" ? baseUrl + "Hat/" + catTraits.hat : "";
-  const mouthUrl = catTraits.mouth !== "" ? baseUrl + "Mouth/" + catTraits.mouth : "";
-  const eyesUrl = catTraits.eyes !== "" ? baseUrl + "Eyes/" + catTraits.eyes : "";
+  const mouthUrl =
+    catTraits.mouth !== "" ? baseUrl + "Mouth/" + catTraits.mouth : "";
+  const eyesUrl =
+    catTraits.eyes !== "" ? baseUrl + "Eyes/" + catTraits.eyes : "";
   let backgroundImg = document.getElementById("background-image");
   let bodyImg = document.getElementById("body-image");
   let clothesImg = document.getElementById("clothes-image");
@@ -50,15 +52,6 @@ function updateCatImage() {
     clothesImg.classList.remove("show");
   }
 
-  // Set the eyes image
-  if (eyesUrl !== "") {
-    eyesImg.setAttribute("src", eyesUrl);
-    eyesImg.classList.add("show");
-  } else {
-    eyesImg.setAttribute("src", "");
-    eyesImg.classList.remove("show");
-  }
-
   // Set the hat image
   if (hatUrl !== "") {
     hatImg.setAttribute("src", hatUrl);
@@ -66,6 +59,15 @@ function updateCatImage() {
   } else {
     hatImg.setAttribute("src", "");
     hatImg.classList.remove("show");
+  }
+
+  // Set the eyes image
+  if (eyesUrl !== "") {
+    eyesImg.setAttribute("src", eyesUrl);
+    eyesImg.classList.add("show");
+  } else {
+    eyesImg.setAttribute("src", "");
+    eyesImg.classList.remove("show");
   }
 
   // Set the mouth image
