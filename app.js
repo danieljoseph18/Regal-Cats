@@ -21,13 +21,19 @@ let catTraits = {
 
 function updateCatImage() {
   const baseUrl = "assets/";
-  const backgroundUrl = baseUrl + catTraits.background;
-  const bodyUrl = baseUrl + catTraits.body;
+  const backgroundUrl = baseUrl + "Background/" + catTraits.background;
+  const bodyUrl = baseUrl + "Base/" + catTraits.body;
   const clothesUrl =
-    catTraits.clothes !== "" ? baseUrl + catTraits.clothes : "";
-  const hatUrl = catTraits.hat !== "" ? baseUrl + catTraits.hat : "";
-  const mouthUrl = catTraits.mouth !== "" ? baseUrl + catTraits.mouth : "";
-  const eyesUrl = catTraits.eyes !== "" ? baseUrl + catTraits.eyes : "";
+    catTraits.clothes !== "" ? baseUrl + "Clothes/" + catTraits.clothes : "";
+  const hatUrl = catTraits.hat !== "" ? baseUrl + "Hat/" + catTraits.hat : "";
+  const mouthUrl = catTraits.mouth !== "" ? baseUrl + "Mouth/" + catTraits.mouth : "";
+  const eyesUrl = catTraits.eyes !== "" ? baseUrl + "Eyes/" + catTraits.eyes : "";
+  let backgroundImg = document.getElementById("background-image");
+  let bodyImg = document.getElementById("body-image");
+  let clothesImg = document.getElementById("clothes-image");
+  let hatImg = document.getElementById("hat-image");
+  let mouthImg = document.getElementById("mouth-image");
+  let eyesImg = document.getElementById("eyes-image");
 
   // Set the background image
   backgroundImg.setAttribute("src", backgroundUrl);
